@@ -1,3 +1,9 @@
+%define __find_provides %{nil}
+%define __find_requires %{nil}
+%define __strip /bin/true
+%define __requires_exclude ^.*$
+%global debug_package %{nil}
+
 Name:    droid-flashing-tools
 Version: 0.0.1
 Release: 1
