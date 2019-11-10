@@ -1,0 +1,3 @@
+How to update:
+1. Download https://dl.google.com/android/repository/platform-tools-latest-windows.zip
+2. Unzip and replace dlls and fastboot binary
