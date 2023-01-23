@@ -5,12 +5,11 @@
 %global debug_package %{nil}
 
 Name:    droid-flashing-tools
-Version: 0.0.1
+Version: 29.0.5
 Release: 1
 Summary: Some flashing tools
-
 Group:   System
-License: BSD
+License: BSD-2-Clause AND Apache-2.0
 Source:	 %{name}-%{version}.tar.bz2
 
 %description
@@ -22,10 +21,11 @@ Source:	 %{name}-%{version}.tar.bz2
 %build
 
 %install
-rm -rf %{buildroot}
-mkdir -p %{buildroot}%{_datadir}/%{name}/
-cp AdbWinApi.dll AdbWinUsbApi.dll fastboot.exe %{buildroot}%{_datadir}/%{name}/
+install -Dm644 AdbWinApi.dll AdbWinUsbApi.dll fastboot.exe \
+        --target-directory %{buildroot}%{_datadir}/%{name}/
 
 %files
 %defattr(-,root,root,-)
 %{_datadir}/%{name}/*
+%license LICENSE.APACHE
+%license LICENSE.BSD2
